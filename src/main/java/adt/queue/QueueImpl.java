@@ -13,8 +13,8 @@ public class QueueImpl<T> implements Queue<T> {
 
 	@Override
 	public T head() {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Not implemented yet!");
+		if ()
+			throw new RuntimeException("null");
 	}
 
 	@Override
