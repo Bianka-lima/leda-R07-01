@@ -13,9 +13,10 @@ public class StackImpl<T> implements Stack<T> {
 
 	@Override
 	public T top() {
-		if (isEmpty())
-			throw new RuntimeException("Pilha vazia");
-		return array[top];
+		T topo = null;
+		if (!(isEmpty()))
+			topo = array[top];
+		return topo;
 	}
 
 	@Override
