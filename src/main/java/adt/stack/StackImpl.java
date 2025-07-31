@@ -31,14 +31,14 @@ public class StackImpl<T> implements Stack<T> {
 	@Override
 	public void push(T element) throws StackOverflowException {
 		if (isFull())
-			throw new RuntimeException("Pilha cheia!");
-		array[top++] = element;
+			throw new StackOverflowException();
+		array[++top] = element;
 	}
 
 	@Override
 	public T pop() throws StackUnderflowException {
 		if (isEmpty()) 
-			throw new RuntimeException("Não há elemento para ser removido");
+			throw new StackUnderflowException();
 		T element = array[top];
 		top--;
 		return element;
